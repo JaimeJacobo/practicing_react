@@ -10,3 +10,24 @@
   padding: 16px;
   text-align: center;
 }
+
+.charContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.charComponent {
+  display: inline-block;
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+  border: 1px solid black;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.charComponent p{
+  margin: 0;
+}
+
