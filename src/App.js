@@ -68,23 +68,17 @@ class App extends Component {
     })
   }
 
-  deleteLetter = (event, key)=>{
+  deleteLetter = (key)=>{
     let index = key
 
     let temporaryListOfCharacters = [...this.state.listOfCharacters]
     temporaryListOfCharacters.splice(index, 1)
 
-    console.log(temporaryListOfCharacters)
-
     document.getElementById('inputMeeter').value = temporaryListOfCharacters.join('')
-    // console.log(temporaryListOfCharacters.join(''))
-
 
     this.setState({
       listOfCharacters: temporaryListOfCharacters
     })
-
-
   }
 
 
@@ -124,7 +118,7 @@ class App extends Component {
         {this.state.listOfCharacters.map((char, index)=>{
           return <CharComponent
             letter={char}
-            click={(event)=>this.deleteLetter(event, index)}
+            click={()=>this.deleteLetter(index)}
             key={index}
           />
         })}
